@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import './style.css';
+import "./style.css";
 
 const App = () => {
   return (
