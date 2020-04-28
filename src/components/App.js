@@ -1,6 +1,7 @@
 import React, {Suspense, lazy} from "react";
 import SearchBar from "./SearchBar";
 import BlogPost from "./blog/BlogPost";
+import Home from "./Home";
 import "./style.css";
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
@@ -20,6 +21,9 @@ const App = () => {
             <li>
               <Link to="/BlogPost">Blog Post</Link>
             </li>
+            <li>
+              <Link to="./Home">Home</Link>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -28,6 +32,9 @@ const App = () => {
           </Route>
           <Route path="/BlogPost">
             <BlogPost />
+          </Route>
+          <Route path="/Home">
+            <Home />
           </Route>
         </Switch>
       </div>
