@@ -1,23 +1,36 @@
 import React, {Suspense, lazy} from "react";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 import "./style.css";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
-const Home = lazy(() => import('./Home'));
-const About = lazy(() => import('./About'));
+const SearchBar = lazy(() => import('./SearchBar'));
+const BlogPost = lazy(() => import('./blog/BlogPost'));
 
 const App = () => {
   return (
     <div className="ui container">
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/SearchBar">Search Bar</Link>
+            </li>
+            <li>
+              <Link to="/BlogPost">Blog Post</Link>
+            </li>
+          </ul>
+        </nav>
         <Switch>
-          <Route exact path="/" component={Home}/>
-          <Route path="/" component={About}/>
+          <Route path="./SearchBar">
+            <SearchBar />
+          </Route>
+          <Route path="./blog/BlogPost">
+
+          </Route>
         </Switch>
-      </Suspense>
+      </div>
     </Router>
-      <SearchBar />
     </div>
   );
 };
