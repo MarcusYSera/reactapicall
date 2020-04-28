@@ -1,10 +1,11 @@
 import React, {Suspense, lazy} from "react";
-// import SearchBar from "./SearchBar";
+import SearchBar from "./SearchBar";
+import BlogPost from "./blog/BlogPost";
 import "./style.css";
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
-const SearchBar = lazy(() => import('./SearchBar'));
-const BlogPost = lazy(() => import('./blog/BlogPost'));
+// const SearchBar = lazy(() => import('./SearchBar'));
+// const BlogPost = lazy(() => import('./blog/BlogPost'));
 
 const App = () => {
   return (
@@ -22,11 +23,11 @@ const App = () => {
           </ul>
         </nav>
         <Switch>
-          <Route path="./SearchBar">
+          <Route path="/SearchBar">
             <SearchBar />
           </Route>
-          <Route path="./blog/BlogPost">
-
+          <Route path="/BlogPost">
+            <BlogPost />
           </Route>
         </Switch>
       </div>
