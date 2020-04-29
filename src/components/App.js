@@ -1,4 +1,4 @@
-import React, {Suspense, lazy} from "react";
+import React from "react";
 import SearchBar from "./SearchBar";
 import BlogPost from "./blog/BlogPost";
 import Home from "./Home";
