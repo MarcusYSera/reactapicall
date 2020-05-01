@@ -1,9 +1,10 @@
 import React from 'react';
+import axios from 'axios';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import BlogPost from './blog/BlogPost';
 import Home from './Home';
 import './style.css';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 // const SearchBar = lazy(() => import('./SearchBar'));
 // const BlogPost = lazy(() => import('./blog/BlogPost'));
