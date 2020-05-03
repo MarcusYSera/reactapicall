@@ -3,6 +3,7 @@ import unsplash from './../api/unsplash';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import BlogPost from './blog/BlogPost';
+import ImageList from './ImageList';
 import Home from './Home';
 import './style.css';
 
@@ -42,7 +43,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/SearchBar">
                 <SearchBar onSubmit={this.onSearchSubmit} />
-                Found: {this.state.images.length} images
+                <ImageList images={this.state.images} />
               </Route>
               <Route path="/BlogPost">
                 <BlogPost />
