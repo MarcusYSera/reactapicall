@@ -10,18 +10,18 @@ import './style.css';
 // const BlogPost = lazy(() => import('./blog/BlogPost'));
 
 class App extends React.Component {
-  onSearchSubmit(term) {
-    console.log(term);
-    axios
-      .get('https://api.unsplash.com/search/photos', {
-        params: { query: term },
-        headers: {
-          Authorization: 'Client-ID -NdQzxuQDJguGVhl5A16dsGK4FwNANDdEpe3NYQ2-PY',
-        },
-      })
-      .then((response) => {
-        console.log(response.data.results[0].urls.raw);
-      });
+  state = { images: [] };
+
+  async onSearchSubmit(term) {
+    // console.log(term);
+    const response = await axios.get('https://api.unsplash.com/search/photos', {
+      params: { query: term },
+      headers: {
+        Authorization: 'Client-ID -NdQzxuQDJguGVhl5A16dsGK4FwNANDdEpe3NYQ2-PY',
+      },
+    });
+    console.log(response.data.results);
+    this.setState({ images: response.data.results });
   }
 
   render() {
@@ -45,6 +45,7 @@ class App extends React.Component {
             <Switch>
               <Route path="/SearchBar">
                 <SearchBar onSubmit={this.onSearchSubmit} />
+                Found: {this.state.images.length} images
               </Route>
               <Route path="/BlogPost">
                 <BlogPost />
