@@ -12,7 +12,7 @@ import './style.css';
 class App extends React.Component {
   state = { images: [] };
 
-  async onSearchSubmit(term) {
+  onSearchSubmit = async (term) => {
     // console.log(term);
     const response = await axios.get('https://api.unsplash.com/search/photos', {
       params: { query: term },
@@ -22,7 +22,7 @@ class App extends React.Component {
     });
     console.log(response.data.results);
     this.setState({ images: response.data.results });
-  }
+  };
 
   render() {
     return (
