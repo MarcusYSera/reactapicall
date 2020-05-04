@@ -1,9 +1,9 @@
 import React from 'react';
 import unsplash from './../api/unsplash';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import SearchBar from './SearchBar';
+import SearchBar from './search/SearchBar';
 import BlogPost from './blog/BlogPost';
-import ImageList from './ImageList';
+import ImageList from './search/ImageList';
 import Home from './Home';
 import './style.css';
 
