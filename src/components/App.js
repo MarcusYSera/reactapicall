@@ -3,6 +3,7 @@ import unsplash from './../api/unsplash';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import SearchBar from './search/SearchBar';
 import BlogPost from './blog/BlogPost';
+import Card from './blog/Card';
 import ImageList from './search/ImageList';
 import Home from './Home';
 import './style.css';
@@ -46,7 +47,9 @@ class App extends React.Component {
                 <ImageList images={this.state.images} />
               </Route>
               <Route path="/BlogPost">
-                <BlogPost />
+                <Card>
+                  <BlogPost />
+                </Card>
               </Route>
               <Route path="/Home">
                 <Home />
