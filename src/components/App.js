@@ -6,6 +6,7 @@ import BlogPost from './blog/BlogPost';
 import Card from './blog/Card';
 import ImageList from './search/ImageList';
 import Home from './home/Home';
+import About from './about/About';
 import './style.css';
 
 // const SearchBar = lazy(() => import('./SearchBar'));
@@ -39,6 +40,9 @@ class App extends React.Component {
                 <li>
                   <Link to="/Home">Home</Link>
                 </li>
+                <li>
+                  <Link to="/About">About</Link>
+                </li>
               </ul>
             </nav>
             <Switch>
@@ -53,6 +57,9 @@ class App extends React.Component {
               </Route>
               <Route path="/Home">
                 <Home />
+              </Route>
+              <Route path="/About">
+                <About />
               </Route>
             </Switch>
           </div>
