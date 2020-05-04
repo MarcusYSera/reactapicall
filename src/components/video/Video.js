@@ -1,7 +1,13 @@
 import React from 'react';
 
-const Video = () => {
-  return <div>Video Tab</div>;
-};
+class Video extends React.Component {
+  render() {
+    return (
+      <div>
+        <div>Video Tab</div>
+      </div>
+    );
+  }
+}
 
 export default Video;
