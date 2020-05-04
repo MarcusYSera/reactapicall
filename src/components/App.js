@@ -5,7 +5,7 @@ import SearchBar from './search/SearchBar';
 import BlogPost from './blog/BlogPost';
 import Card from './blog/Card';
 import ImageList from './search/ImageList';
-import Home from './Home';
+import Home from './home/Home';
 import './style.css';
 
 // const SearchBar = lazy(() => import('./SearchBar'));
@@ -37,7 +37,7 @@ class App extends React.Component {
                   <Link to="/BlogPost">Blog Post</Link>
                 </li>
                 <li>
-                  <Link to="./Home">Home</Link>
+                  <Link to="/Home">Home</Link>
                 </li>
               </ul>
             </nav>
