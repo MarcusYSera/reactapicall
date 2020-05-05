@@ -7,8 +7,10 @@ class Video extends React.Component {
     return (
       <div>
         <form>
-          <label>Video Search</label>
-          <input></input>
+          <div>
+            <label>Video Search</label>
+            <input />
+          </div>
         </form>
       </div>
     );
