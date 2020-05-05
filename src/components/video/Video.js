@@ -1,6 +1,8 @@
 import React from 'react';
 
 class Video extends React.Component {
+  state = { keyWord: '' };
+
   render() {
     return (
       <div>
