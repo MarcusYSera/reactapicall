@@ -4,7 +4,10 @@ class Video extends React.Component {
   render() {
     return (
       <div>
-        <div>Video Tab</div>
+        <form>
+          <label>Video Search</label>
+          <input></input>
+        </form>
       </div>
     );
   }
