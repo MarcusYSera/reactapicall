@@ -14,7 +14,7 @@ import './style.css';
 // const BlogPost = lazy(() => import('./blog/BlogPost'));
 
 class App extends React.Component {
-  state = { images: [] };
+  state = { images: [], label: null };
 
   onSearchSubmit = async (term) => {
     // console.log(term);
@@ -51,7 +51,7 @@ class App extends React.Component {
             </nav>
             <Switch>
               <Route path="/SearchBar">
-                <SearchBar onSubmit={this.onSearchSubmit} />
+                <SearchBar onSubmit={this.onSearchSubmit} labelForText="Image" />
                 <ImageList images={this.state.images} />
               </Route>
               <Route path="/BlogPost">
