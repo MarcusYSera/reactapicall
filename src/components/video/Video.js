@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './../searchbar/SearchBar';
+import SearchList from './VideoList';
 
 class Video extends React.Component {
   state = { keyWord: '' };
@@ -8,6 +9,7 @@ class Video extends React.Component {
     return (
       <div>
         <SearchBar labelForText="Video" />
+        <VideoList />
       </div>
     );
   }
