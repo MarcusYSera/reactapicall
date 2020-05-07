@@ -66,8 +66,7 @@ class App extends React.Component {
                 <About />
               </Route>
               <Route path="/Video">
-                <SearchBar labelForText="Video" />
-                {/* <Video /> */}
+                <Video />
               </Route>
             </Switch>
           </div>

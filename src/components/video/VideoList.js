@@ -6,6 +6,9 @@ const VideoList = () => {
     <div>
       <div>Video List</div>
       <VideoCard />
+      <VideoCard />
+      <VideoCard />
+      <VideoCard />
     </div>
   );
 };
