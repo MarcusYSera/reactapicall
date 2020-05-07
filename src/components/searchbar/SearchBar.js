@@ -13,12 +13,12 @@ class SearchBar extends React.Component {
     // console.log(this.state.term);
   };
 
-  render(props) {
+  render() {
     return (
       <div className="ui segment">
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
-            <label>{props.labelForText}</label>
+            <label>{this.props.labelForText}</label>
             <input
               type="text"
               value={this.state.term}

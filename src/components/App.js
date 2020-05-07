@@ -1,7 +1,7 @@
 import React from 'react';
 import unsplash from './../api/unsplash';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import SearchBar from './search/SearchBar';
+import SearchBar from './searchbar/SearchBar';
 import BlogPost from './blog/BlogPost';
 import Card from './blog/Card';
 import ImageList from './search/ImageList';
@@ -33,7 +33,7 @@ class App extends React.Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/SearchBar">Search Bar</Link>
+                  <Link to="/SearchBar">Image</Link>
                 </li>
                 <li>
                   <Link to="/BlogPost">Blog Post</Link>
@@ -66,7 +66,8 @@ class App extends React.Component {
                 <About />
               </Route>
               <Route path="/Video">
-                <Video />
+                <SearchBar labelForText="Video" />
+                {/* <Video /> */}
               </Route>
             </Switch>
           </div>
