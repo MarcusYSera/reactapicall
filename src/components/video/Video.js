@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './../searchbar/SearchBar';
-import SearchList from './VideoList';
+import VideoList from './VideoList';
 
 class Video extends React.Component {
   state = { keyWord: '' };
